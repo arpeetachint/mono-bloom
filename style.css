@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "The Seasons";
+  src: url("fonts/TheSeasons-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Create Fabrica";
+  src: url("fonts/CreateFabrica-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+:root {
+      --bg: #FDFAF1;
+  --star: #3b3030;
+  --font-script: "Pinyon Script", "Snell Roundhand", cursive;
+  --card: #F2E6D8;
+  --accent: #EDE8ED;
+  --text: #6b6259;
+    --font-serif: "The Seasons", Georgia, serif;
+  --font-accent: "Create Fabrica", "The Seasons", Georgia, serif;
+  --font-sans: "Gill Sans", "Gill Sans MT", "Cabin", Calibri, sans-serif;
+    --font-heading: "Cormorant Garamond", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+.logo {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-accent);
+  margin: 8px 0 32px;
+  opacity: 0.8;
+}
+
+
+main {
+  width: min(560px, 92vw);
+  text-align: center;
+  padding: 40px 0;
+}
+
+h1 { font-weight: 300; letter-spacing: 0.15em; margin: 0; }
+.subtitle { margin: 8px 0 32px; opacity: 0.75; }
+
+#dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 56px 24px;
+  background: var(--card);
+  border: 2px dashed #d9c9b6;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#dropzone:hover, #dropzone.over { background: var(--accent); }
+
+#result { margin-top: 28px; }
+#previewImg, #video {
+  max-width: 100%;
+  border-radius: 16px;
+  background: var(--accent);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 28px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.button:hover { background: var(--accent); }
+
+.steps {
+  margin-top: 56px;
+  text-align: left;
+}
+
+.steps h2 {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+.steps ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: var(--card);
+  border-radius: 16px;
+}
+
+.steps .num {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  border-radius: 50%;
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+}
+
+.steps p { margin: 0; line-height: 1.5; }
+.steps strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.sky {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: var(--star);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+main { position: relative; z-index: 1; }

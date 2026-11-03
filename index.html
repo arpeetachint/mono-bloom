@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mono bloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sky" aria-hidden="true"></div>
+  <main>
+    
+    <h1 class="logo">mono bloom</h1>
+    <p class="subtitle">turn any image or video into black &amp; white</p>
+
+    <label id="dropzone" for="fileInput">
+      <span>drop a file here or <u>browse</u></span>
+      <small>images and videos</small>
+    </label>
+    <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+
+    <section id="result" hidden>
+     <img id="previewImg" hidden alt="converted preview">
+     <video id="video" playsinline hidden></video>
+      <p id="status"></p>
+      <a id="download" class="button" hidden>download</a>
+    </section>
+    <section class="steps">
+  <h2>How it works?</h2>
+  <ol>
+    <li>
+      <span class="num">1</span>
+      <p><strong>Choose a file</strong>Drop an image or video into the box, or tap browse</p>
+    </li>
+    <li>
+      <span class="num">2</span>
+      <p><strong>Wait a moment</strong>It turns black &amp; white right in your browser (videos take as long as their length)</p>
+    </li>
+    <li>
+      <span class="num">3</span>
+      <p><strong>Download</strong>Press the download button to save your new file</p>
+    </li>
+  </ol>
+</section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
