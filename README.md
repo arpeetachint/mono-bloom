@@ -34,27 +34,5 @@ https://mono-bloom.onrender.com/
 
 
 
-## 5. Run it locally
 
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
 
-FFmpeg must be installed and available in your PATH. Then open `index.html` with a local server such as VS Code Live Server, and set `API_URL` in `script.js` to `http://127.0.0.1:5000/convert`.
-
-## 6. Project structure
-
-```
-mono-bloom/
-├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-├── fonts/
-├── screenshots/
-├── index.html
-├── style.css
-└── script.js
-```
