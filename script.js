@@ -1,4 +1,4 @@
-const API_URL = "https://mono-bloom-api.onrender.com/convert";
+const API_URL = "https://mono-bloom.onrender.com/convert";
 // scattered stars: [left %, top %, size px, rotation deg]
 const stars = [
   [8, 6, 34, 12],   [30, 4, 16, -8],  [88, 10, 14, 20],
