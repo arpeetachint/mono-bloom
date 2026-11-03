@@ -8,7 +8,7 @@ from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # later, restrict this to your GitHub Pages address
+ CORS(app, origins=["https://arpeetachint.github.io"])  # later, restrict this to your GitHub Pages address
 app.config["MAX_CONTENT_LENGTH"] = 200 * 1024 * 1024  # 200 MB
 
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".tif", ".tiff"}
