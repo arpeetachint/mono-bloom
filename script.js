@@ -14,9 +14,7 @@ stars.forEach(([x, y, size, rot]) => {
   s.style.cssText = `left:${x}%;top:${y}%;width:${size}px;height:${size}px;transform:rotate(${rot}deg)`;
   sky.appendChild(s);
 });
-
-const API_URL = "http://127.0.0.1:5000/convert"; // change after deploying
-
+ 
 const fileInput = document.getElementById("fileInput");
 const dropzone = document.getElementById("dropzone");
 const result = document.getElementById("result");
