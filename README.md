@@ -32,11 +32,9 @@ flowchart LR
 
 [https://arpeetachint.github.io/mono-bloom/](https://arpeetachint.github.io/mono-bloom/)
 
-## 5. Screenshot of the Interface
 
-![mono bloom interface](screenshots/interface.png)
 
-## 6. Run it locally
+## 5. Run it locally
 
 ```bash
 cd backend
@@ -46,7 +44,7 @@ python app.py
 
 FFmpeg must be installed and available in your PATH. Then open `index.html` with a local server such as VS Code Live Server, and set `API_URL` in `script.js` to `http://127.0.0.1:5000/convert`.
 
-## 7. Project structure
+## 6. Project structure
 
 ```
 mono-bloom/
