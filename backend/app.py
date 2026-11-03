@@ -2,13 +2,14 @@ import os
 import shutil
 import subprocess
 import tempfile
+from io import BytesIO
 
 import cv2
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, send_file, send_from_directory
 from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app, origins=["https://arpeetachint.github.io"])  # later, restrict this to your GitHub Pages address
+app = Flask(__name__, static_folder="static", static_url_path="")
+CORS(app, origins=["https://arpeetachint.github.io"])
 app.config["MAX_CONTENT_LENGTH"] = 200 * 1024 * 1024  # 200 MB
 
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".tif", ".tiff"}
@@ -59,6 +60,11 @@ def grey_video(src, dst, ext):
         raise RuntimeError(result.stderr[-400:])
 
 
+@app.route("/")
+def home():
+    return send_from_directory("static", "index.html")
+
+
 @app.route("/convert", methods=["POST"])
 def convert():
     file = request.files.get("file")
@@ -86,7 +92,6 @@ def convert():
     finally:
         shutil.rmtree(folder, ignore_errors=True)
 
-    from io import BytesIO
     return send_file(BytesIO(data), download_name="mono-bloom" + ext, as_attachment=False)
 
 
